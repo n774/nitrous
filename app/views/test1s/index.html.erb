@@ -1,0 +1,31 @@
+<h1>Listing test1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test1s.each do |test1| %>
+      <tr>
+        <td><%= test1.name %></td>
+        <td><%= test1.sex %></td>
+        <td><%= test1.age %></td>
+        <td><%= link_to 'Show', test1 %></td>
+        <td><%= link_to 'Edit', edit_test1_path(test1) %></td>
+        <td><%= link_to 'Destroy', test1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test1', new_test1_path %>
