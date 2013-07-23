@@ -6,6 +6,6 @@ notifications:
 bundler_args: --deployment 
 script:
   - bundle exec rake db:migrate
-  
+
 #after_success:
 #  - ./heroku.sh
